@@ -1,7 +1,7 @@
 // @flow
 
 // List of words in the English language
-const eng_words = Object.freeze([
+const engWords = Object.freeze([
   'a',
   'ab',
   'abutter',
@@ -150,4 +150,4 @@ const eng_words = Object.freeze([
   'zip',
 ]);
 
-export default eng_words;
+export default engWords;

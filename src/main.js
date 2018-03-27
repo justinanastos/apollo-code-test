@@ -2,22 +2,22 @@
 import dictionary from './dictionary';
 
 // Maps num to string of characters it corresponds to
-const num_to_chars: string[] = [];
-num_to_chars[2] = 'abc';
-num_to_chars[3] = 'def';
-num_to_chars[4] = 'ghi';
-num_to_chars[5] = 'jkl';
-num_to_chars[6] = 'mno';
-num_to_chars[7] = 'pqrs';
-num_to_chars[8] = 'tuv';
-num_to_chars[9] = 'wxyz';
+const numToChars: string[] = [];
+numToChars[2] = 'abc';
+numToChars[3] = 'def';
+numToChars[4] = 'ghi';
+numToChars[5] = 'jkl';
+numToChars[6] = 'mno';
+numToChars[7] = 'pqrs';
+numToChars[8] = 'tuv';
+numToChars[9] = 'wxyz';
 
 export function parseInput(input: number[]): string[] {
   let filteredDictionary = dictionary;
 
   // For each number in the array...
   input.forEach((inputNumber: number, index: number) => {
-    const possibleLetters = num_to_chars[inputNumber];
+    const possibleLetters = numToChars[inputNumber];
 
     if (!possibleLetters) {
       throw new Error('invalid input, better articulate this later');
@@ -55,6 +55,7 @@ export default function main(): void {
   const input = [2];
   const result = parseInput(input);
 
+  // eslint-disable-next-line no-console
   console.log(result);
   // console.log('hello world 👋');
 }

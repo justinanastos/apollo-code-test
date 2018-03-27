@@ -17,6 +17,7 @@ describe('main', () => {
     describe('for single [2]', () => {
       const result = parseInput([2]);
 
+      // Note that this should be checking the _order_ as well
       expect(result).toEqual([
         'a',
         'ab',
@@ -64,7 +65,7 @@ describe('main', () => {
       ]);
 
       ['xray'].forEach(term => {
-        it(`result should include ${term}`, () => {
+        it(`result not should include ${term}`, () => {
           expect(result.includes(term)).toBe(false);
         });
       });
@@ -73,16 +74,8 @@ describe('main', () => {
     describe('for single [9, 2, 3, 3, 5, 3]', () => {
       const result = parseInput([9, 2, 3, 3, 5, 3]);
 
-      ['waffle'].forEach(term => {
-        it(`result should include ${term}`, () => {
-          expect(result.includes(term)).toBe(true);
-        });
-      });
-
-      ['cat', 'act', 'bat', 'bubble', 'catamaran'].forEach(term => {
-        it(`result should include ${term}`, () => {
-          expect(result.includes(term)).toBe(false);
-        });
+      it('should return waffle', () => {
+        expect(result).toEqual(['waffle']);
       });
     });
   });
