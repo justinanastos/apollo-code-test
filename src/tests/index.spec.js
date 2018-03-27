@@ -17,11 +17,51 @@ describe('main', () => {
     describe('for single [2]', () => {
       const result = parseInput([2]);
 
-      ['cat', 'act', 'bat', 'bubble', 'catamaran'].forEach(term => {
-        it(`result should include ${term}`, () => {
-          expect(result.includes(term)).toBe(true);
-        });
-      });
+      expect(result).toEqual([
+        'a',
+        'ab',
+        'abutter',
+        'acrobat',
+        'act',
+        'action',
+        'amsterdam',
+        'and',
+        'are',
+        'armchair',
+        'australia',
+        'author',
+        'baby',
+        'balloon',
+        'bar',
+        'barbed',
+        'barf',
+        'bat',
+        'bath',
+        'bay',
+        'bird',
+        'black',
+        'bobcat',
+        'bubble',
+        'buchholz',
+        'burn',
+        'but',
+        'cannonball',
+        'canter',
+        'cantor',
+        'carrot',
+        'cart',
+        'cat',
+        'catamaran',
+        'catapult',
+        'cataract',
+        'caterpillar',
+        'compel',
+        'concrete',
+        'conflagration',
+        'cookie',
+        'current',
+        'cypress',
+      ]);
 
       ['xray'].forEach(term => {
         it(`result should include ${term}`, () => {
